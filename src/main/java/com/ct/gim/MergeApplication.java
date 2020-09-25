@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class MergeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MergeApplication.class);
+		SpringApplication.run(MergeApplication.class, args);
 	}
 
 }
