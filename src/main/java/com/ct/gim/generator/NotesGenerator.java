@@ -53,7 +53,8 @@ public class NotesGenerator {
         ModelMapper modelMapper = new ModelMapper();
         NotesVo notesVo = new NotesVo();
         String authorization = String.format("Bearer %s", gitlab.getAccessToken());
-        String noteTemplate = Files.readString(Paths.get(resourceNotes.getURI()), StandardCharsets.UTF_8);
+        byte[] bdata = FileCopyUtils.copyToByteArray(resourceNotes.getInputStream());
+        String noteTemplate = new String(bdata, StandardCharsets.UTF_8);
         // 先取出所有 Milestone
         List<Milestone> milestones = gitlabClient.getMilestones(authorization, gitlab.getProjectId());
         // 拿出未關閉的
