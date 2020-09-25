@@ -3,13 +3,18 @@ spring:
     name: gitlab-issue-merge
   main:
     web-application-type: none
-  profiles:
-    active:
-    - dev
+
+feign:
+  hystrix:
+    enabled: false
+  client:
+    config:
+      gitlab:
+        loggerLevel: full
 
 logging:
   level:
     root: info
     sun.net.www.protocol.http.HttpURLConnection: info
-    com.ct.rng: info
+    com.ct.gim: info
 
