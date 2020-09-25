@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gitlab-issue-merge
+  main:
+    web-application-type: none
+  profiles:
+    active:
+    - dev
+
+logging:
+  level:
+    root: info
+    sun.net.www.protocol.http.HttpURLConnection: info
+    com.ct.rng: info
+

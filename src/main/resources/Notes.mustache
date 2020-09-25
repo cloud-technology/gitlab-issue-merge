@@ -1,0 +1,32 @@
+{{#milestoneVos}}
+
+{{title}} 
+
+## :star: New Features 
+{{#sectionVo.newFeatures}}
+- {{title}} - {{closedAt}} [#{{iid}}]({{webUrl}}) 
+{{/sectionVo.newFeatures}}
+
+## :beetle: Bug Fixes 
+{{#sectionVo.bugFixes}}
+- {{title}} - {{closedAt}} [#{{iid}}]({{webUrl}}) 
+{{/sectionVo.bugFixes}}
+
+## :notebook_with_decorative_cover: Documentation 
+{{#sectionVo.documentation}}
+- {{title}} - {{closedAt}} [#{{iid}}]({{webUrl}}) 
+{{/sectionVo.documentation}}
+
+## :hammer: Dependency Upgrades 
+{{#sectionVo.dependencyUpgrades}}
+- {{title}} - {{closedAt}} [#{{iid}}]({{webUrl}}) 
+{{/sectionVo.dependencyUpgrades}}
+
+{{/milestoneVos}}
+
+## :tada: Issue closed 
+{{#allIssues}}
+- {{title}} - {{closedAt}} [#{{iid}}]({{webUrl}}) 
+{{/allIssues}}
+
+## :heart: Contributors 
