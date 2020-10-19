@@ -90,6 +90,8 @@ public class NotesGenerator {
         File file = new File(path);
         if (file.exists()) {
             file.delete();
+        }else{
+            file.getParentFile().mkdirs();
         }
         FileCopyUtils.copy(content, new FileWriter(new File(path)));
     }

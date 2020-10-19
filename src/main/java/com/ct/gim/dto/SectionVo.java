@@ -12,14 +12,17 @@ public class SectionVo {
     private List<IssueVo> documentation = new ArrayList<>();
     private List<IssueVo> dependencyUpgrades = new ArrayList<>();
 
-    public void addIssue(IssueVo issueVo){
-        if(issueVo.getLabels().contains("enhancement")){
+    public void addIssue(IssueVo issueVo) {
+        if (issueVo.getLabels().contains("enhancement")) {
             this.newFeatures.add(issueVo);
-        }else if(issueVo.getLabels().contains("regression")){
+        }
+        if (issueVo.getLabels().contains("regression") || issueVo.getLabels().contains("bug")) {
             this.bugFixes.add(issueVo);
-        }else if(issueVo.getLabels().contains("documentation")){
+        }
+        if (issueVo.getLabels().contains("documentation")) {
             this.documentation.add(issueVo);
-        }else if(issueVo.getLabels().contains("dependency-upgrade")){
+        }
+        if (issueVo.getLabels().contains("dependency-upgrade")) {
             this.dependencyUpgrades.add(issueVo);
         }
     }
